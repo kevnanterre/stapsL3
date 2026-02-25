@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Judo - KEVIN'S SHOP</title>
+    <style>
+        body { 
+            margin:0; padding:0; font-family: 'Segoe UI', sans-serif; 
+            /* Fond Noir Performance */
+            background: radial-gradient(circle at top, #1a1a1a, #000000); 
+            color: white; text-align:center; min-height: 100vh;
+        }
+        
+        header { 
+            padding:50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #ffd700; /* Or pour le Judo */
+        }
+        
+        /* TITRE 3D CALIBRÉ */
+        h1 { 
+            font-size: 2.5em; font-weight: 900; letter-spacing: 3px; margin: 0; 
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px #947a00, 0 0 15px rgba(255,215,0,0.3); 
+        }
+
+        .tagline {
+            margin-top: 15px; font-style: italic; opacity: 0.8; letter-spacing: 2px;
+            text-transform: uppercase; font-weight: 600; font-size: 0.9em;
+        }
+
+        .container { max-width: 1450px; margin: 50px auto; padding: 0 20px; }
+
+        /* GRILLE XXL POUR GRANDS CADRES */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); 
+            gap: 50px; 
+            padding-bottom: 60px;
+        }
+
+        /* CADRES PRODUITS AGRANDIS STYLE DARK */
+        .item { 
+            background: #111; 
+            border-radius: 12px; padding: 50px; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            display: flex; flex-direction: column; justify-content: space-between;
+            min-height: 600px;
+        }
+
+        .item:hover { 
+            transform: translateY(-15px); 
+            border-color: #ffd700; 
+            box-shadow: 0 15px 40px rgba(255,215,0,0.2);
+            background: #161616;
+        }
+
+        h3 { font-size: 1.8em; margin-bottom: 20px; font-weight: 800; color: #fff; }
+
+        .img-wrapper {
+            height: 350px; display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,0.02); border-radius: 10px; margin-bottom: 30px;
+        }
+
+        img { 
+            max-width: 90%; max-height: 90%; object-fit: contain; 
+            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.6));
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover img { transform: scale(1.08); }
+
+        .prix { 
+            font-size: 3em; color: #ffd700; font-weight: 900; 
+            margin: 20px 0; display: block; font-style: italic;
+        }
+
+        .btn { 
+            background: #ffd700; color: #000; text-decoration:none; 
+            padding: 20px; border-radius: 6px; font-weight: 900; 
+            text-transform: uppercase; transition: 0.3s;
+        }
+
+        .btn:hover { 
+            background: #fff;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        .back-nav { width: 100%; margin: 60px 0; display: flex; justify-content: center; }
+
+        .back { 
+            color: #7f8c8d; text-decoration:none; font-weight: 800; 
+            border: 1px solid #333;
+            padding: 12px 40px; border-radius: 50px; transition: 0.3s;
+        }
+        .back:hover { background: #fff; color: #000; border-color: #fff; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🥋 UNIVERS JUDO</h1>
+        <p class="tagline">La voie de la souplesse et de la maîtrise</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <div class="item">
+                <h3>McDavid Genouillères</h3>
+                <div class="img-wrapper"><img src="mc_david.jpg"></div>
+                <span class="prix">29€</span>
+                <a href="#" class="btn">Protéger les appuis</a>
+            </div>
+
+            <div class="item">
+                <h3>Mizuno Judogi 350g</h3>
+                <div class="img-wrapper"><img src="mizuno_judogi.jpg"></div>
+                <span class="prix">49€</span>
+                <a href="#" class="btn">Équipement de base</a>
+            </div>
+
+            <div class="item">
+                <h3>Bandages 5m</h3>
+                <div class="img-wrapper"><img src="Bandages.jpg"></div>
+                <span class="prix">12€</span>
+                <a href="#" class="btn">Sécuriser la prise</a>
+            </div>
+
+        </div>
+
+        <div class="back-nav">
+            <a href="KEVIN HEYSSAUTIER.html" class="back">← RETOUR AU SOMMAIRE PRINCIPAL</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KEVIN'S SHOP - HUB</title>
+    <style>
+        body { 
+            margin:0; padding:0; font-family: 'Segoe UI', system-ui, sans-serif; 
+            background: radial-gradient(circle at top, #1a1a1a, #000000); 
+            color: white; text-align:center; min-height: 100vh;
+        }
+        
+        header { 
+            padding: 25px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #ff0000; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left { flex: 1; } 
+
+        .header-center { flex: 3; }
+        .header-center h1 { 
+            font-size: 2.2em; font-weight: 900; letter-spacing: 2px; margin: 0;
+            white-space: nowrap; color: #fff; text-transform: uppercase;
+            text-shadow: 2px 2px 0px #800000;
+        }
+
+        .header-right { flex: 1; text-align: right; }
+
+        /* BOUTON DEVENIR MEMBRE */
+        .header-btn {
+            text-decoration: none;
+            color: white;
+            background: #ff0000;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 0 #b30000;
+        }
+
+        .header-btn:hover {
+            background: #cc0000;
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #b30000;
+        }
+
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+
+        .main-tagline {
+            font-size: 1.1em; font-weight: 700; margin-bottom: 50px;
+            letter-spacing: 4px; color: #ecf0f1; text-transform: uppercase;
+            display: inline-block; position: relative; padding-bottom: 10px;
+        }
+
+        .main-tagline::after {
+            content: ''; position: absolute; bottom: 0; left: 25%; width: 50%;
+            height: 2px; background: #ff0000;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .category-card { 
+            background: #111; border-radius: 12px; padding: 50px 20px;
+            text-decoration: none; color: white; 
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.4s;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        .card-foot:hover { border-color: #00d2ff; box-shadow: 0 10px 30px rgba(0,210,255,0.15); transform: translateY(-10px); }
+        .card-basket:hover { border-color: #ff8c00; box-shadow: 0 10px 30px rgba(255,140,0,0.15); transform: translateY(-10px); }
+        .card-judo:hover { border-color: #ffd700; box-shadow: 0 10px 30px rgba(255,215,0,0.15); transform: translateY(-10px); }
+
+        .icon-box { font-size: 4em; margin-bottom: 20px; }
+        h2 { font-size: 1.8em; margin-bottom: 10px; font-weight: 900; }
+        .sub-text { font-size: 0.85em; color: #7f8c8d; margin-bottom: 30px; letter-spacing: 1px; }
+        
+        .btn-view {
+            padding: 14px 30px; background: rgba(255,255,255,0.05); color: #fff;
+            border-radius: 6px; font-weight: 900; text-transform: uppercase;
+            transition: 0.3s; font-size: 0.8em; border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card-foot:hover .btn-view { background: #00d2ff; color: #000; border-color: #00d2ff; }
+        .card-basket:hover .btn-view { background: #ff8c00; color: #000; border-color: #ff8c00; }
+        .card-judo:hover .btn-view { background: #ffd700; color: #000; border-color: #ffd700; }
+
+        .trust-bar {
+            display: flex; 
+            justify-content: space-around; 
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px; 
+            margin-top: 80px; 
+            font-weight: 800; 
+            color: #7f8c8d;
+            border-top: 1px solid #222; 
+            font-size: 0.75em;
+            border-radius: 12px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-icon {
+            font-size: 1.8em;
+            filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.4));
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left"></div> 
+        <div class="header-center">
+            <h1>🏆 KEVIN'S SHOP</h1>
+        </div>
+        <div class="header-right">
+            <a href="inscription.html" class="header-btn">DEVENIR MEMBRE</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <span class="main-tagline">L'équipement des champions</span>
+        
+        <div class="grid">
+            <a href="Football.html" class="category-card card-foot">
+                <div class="icon-box">⚽</div>
+                <h2>FOOTBALL</h2>
+                <p class="sub-text">MAÎTRISEZ LE TERRAIN</p>
+                <div class="btn-view">VOIR LES PRODUITS</div>
+            </a>
+
+            <a href="basketball.html" class="category-card card-basket">
+                <div class="icon-box">🏀</div>
+                <h2>BASKETBALL</h2>
+                <p class="sub-text">DÉFIEZ LA GRAVITÉ</p>
+                <div class="btn-view">VOIR LES PRODUITS</div>
+            </a>
+
+            <a href="Judo.html" class="category-card card-judo">
+                <div class="icon-box">🥋</div>
+                <h2>JUDO</h2>
+                <p class="sub-text">LA VOIE DE LA MAÎTRISE</p>
+                <div class="btn-view">VOIR LES PRODUITS</div>
+            </a>
+        </div>
+
+        <div class="trust-bar">
+            <div class="trust-item">
+                <span class="trust-icon">⚡</span>
+                <div>LIVRAISON 24H</div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🛡️</span>
+                <div>PAIEMENT 100% SÉCURISÉ</div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💎</span>
+                <div>SERVICE PREMIUM</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+</html>

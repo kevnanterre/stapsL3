@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basketball - KEVIN'S SHOP</title>
+    <style>
+        body { 
+            margin:0; padding:0; font-family: 'Segoe UI', sans-serif; 
+            /* Nouveau fond Dark Performance */
+            background: radial-gradient(circle at top, #1a1a1a, #000000); 
+            color: white; text-align:center; min-height: 100vh;
+        }
+        
+        header { 
+            padding:50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #ff8c00; /* Néon Orange Basket */
+        }
+        
+        h1 { 
+            font-size: 3em; font-weight: 900; letter-spacing: 2px; margin: 0; 
+            text-shadow: 2px 2px 0px #945200, 0 0 15px rgba(255,140,0,0.3); 
+        }
+
+        .tagline {
+            margin-top: 15px; font-style: italic; opacity: 0.8; 
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 600; 
+            font-size: 0.9em;
+        }
+
+        .container { max-width: 1300px; margin: 50px auto; padding: 0 20px; }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 40px; 
+            padding-bottom: 60px;
+        }
+
+        .item { 
+            background: #111; 
+            border-radius: 12px; padding: 30px; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        .item:hover { 
+            transform: translateY(-10px); 
+            border-color: #ff8c00; 
+            box-shadow: 0 10px 30px rgba(255,140,0,0.15);
+            background: #161616;
+        }
+
+        h3 { font-size: 1.5em; margin-bottom: 20px; font-weight: 700; color: #fff; }
+
+        .img-wrapper {
+            height: 240px; display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,0.02); border-radius: 10px; margin-bottom: 20px;
+        }
+
+        img { 
+            max-width: 80%; max-height: 80%; object-fit: contain; 
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover img { transform: scale(1.1) rotate(-3deg); }
+
+        .prix { 
+            font-size: 2.5em; color: #ff8c00; font-weight: 900; 
+            margin: 15px 0; display: block; font-style: italic;
+        }
+
+        .btn { 
+            background: #ff8c00; color: #000; text-decoration:none; 
+            padding: 18px; border-radius: 6px; font-weight: 900; 
+            text-transform: uppercase; transition: 0.3s;
+        }
+
+        .btn:hover { 
+            background: #fff;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        .back { 
+            display:inline-block; margin: 60px 0; color: #7f8c8d; 
+            text-decoration:none; font-weight: 800; border: 1px solid #333;
+            padding: 12px 40px; border-radius: 50px; transition: 0.3s;
+        }
+        .back:hover { background: #fff; color: #000; border-color: #fff; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏀 UNIVERS BASKETBALL</h1>
+        <p class="tagline">Visez les sommets, défiez la gravité</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <div class="item">
+                <h3>Ballon Spalding TF-1000</h3>
+                <div class="img-wrapper"><img src="ballon_basket.jpg" alt="Ballon"></div>
+                <span class="prix">55€</span>
+                <a href="#" class="btn">Prendre le tir</a>
+            </div>
+
+            <div class="item">
+                <h3>Chaussures Jordan Luka 2</h3>
+                <div class="img-wrapper"><img src="chaussures_basket.jpg" alt="Jordan"></div>
+                <span class="prix">130€</span>
+                <a href="#" class="btn">S'élever au cercle</a>
+            </div>
+
+            <div class="item">
+                <h3>Panier Mural Pro</h3>
+                <div class="img-wrapper"><img src="panier_basket.jpg" alt="Panier"></div>
+                <span class="prix">85€</span>
+                <a href="#" class="btn">S'entraîner dur</a>
+            </div>
+
+            <div class="item">
+                <h3>Maillot Lakers (LeBron)</h3>
+                <div class="img-wrapper"><img src="maillot_basket.jpg" alt="Maillot"></div>
+                <span class="prix">95€</span>
+                <a href="#" class="btn">Entrer sur le terrain</a>
+            </div>
+
+            <div class="item">
+                <h3>Manchon de compression</h3>
+                <div class="img-wrapper"><img src="manchon_basket.jpg" alt="Manchon"></div>
+                <span class="prix">15€</span>
+                <a href="#" class="btn">Récupération Pro</a>
+            </div>
+
+            <div class="item">
+                <h3>Chaussettes NBA Elite</h3>
+                <div class="img-wrapper"><img src="chaussettes_basket.jpg" alt="Chaussettes"></div>
+                <span class="prix">12€</span>
+                <a href="#" class="btn">Confort de jeu</a>
+            </div>
+
+        </div>
+
+        <a href="KEVIN HEYSSAUTIER.html" class="back">← RETOUR AU SOMMAIRE</a>
+    </div>
+
+</body>
+</html>
