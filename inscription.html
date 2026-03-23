@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DEVENIR MEMBRE - KEVIN'S SHOP</title>
+    <style>
+        body { 
+            margin:0; padding:0; font-family: 'Segoe UI', sans-serif; 
+            background: radial-gradient(circle at top, #1a1a1a, #000000); 
+            color: white; text-align:center; min-height: 100vh;
+        }
+
+        header { 
+            padding: 25px 50px; 
+            background: rgba(0, 0, 0, 0.8); 
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #ff0000; 
+            display: flex; 
+            justify-content: center;
+        }
+
+        h1 { 
+            font-size: 2em;
+            font-weight: 900; 
+            letter-spacing: 2px; 
+            text-shadow: 2px 2px 0px #800000; 
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .container { max-width: 550px; margin: 40px auto; padding: 0 20px; }
+
+        form { 
+            background: #111; 
+            padding: 45px; 
+            border-radius: 20px; 
+            border: 1px solid rgba(255,255,255,0.08); 
+            text-align: left;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            margin-bottom: 40px;
+        }
+
+        .form-group { margin-bottom: 25px; }
+
+        label { 
+            display: block; 
+            margin-bottom: 10px; 
+            font-weight: 800; 
+            color: #bdc3c7; 
+            font-size: 0.8em; 
+            letter-spacing: 1px;
+        }
+
+        input[type="text"], input[type="password"], input[type="date"], select {
+            width: 100%; 
+            padding: 14px; 
+            border-radius: 10px; 
+            border: 1px solid #333;
+            background: #050505; 
+            color: white; 
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-box { display: flex; gap: 20px; margin-top: 35px; }
+
+        button { 
+            flex: 1; 
+            padding: 16px; 
+            border-radius: 10px; 
+            border: none; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            transition: 0.3s ease; 
+            letter-spacing: 1px;
+        }
+
+        .btn-save { 
+            background: #ff0000; 
+            color: white; 
+            box-shadow: 0 4px 0 #b30000;
+        }
+
+        .btn-save:hover { 
+            background: #e60000; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #b30000;
+        }
+
+        .btn-cancel { 
+            background: transparent; 
+            color: #7f8c8d;
+            border: 1px solid #333;
+        }
+
+        /* --- LE BOUTON RETOUR QUI DÉCHIRE --- */
+        .back-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .back { 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: 900;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 18px 45px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(5px);
+        }
+
+        .back:hover { 
+            background: rgba(255, 0, 0, 0.1);
+            border-color: #ff0000;
+            color: #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .back i {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏆 DEVENIR MEMBRE DU MAGASIN</h1>
+    </header>
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label>NOM & PRÉNOM</label>
+                <input type="text" placeholder="EX: KEVIN H.">
+            </div>
+
+            <div class="form-group">
+                <label>DATE DE NAISSANCE</label>
+                <input type="date">
+            </div>
+
+            <div class="form-group">
+                <label>VILLE</label>
+                <select>
+                    <option value="" disabled selected>CHOISIS TA VILLE</option>
+                    <option>NICE</option>
+                    <option>PARIS</option>
+                    <option>MARSEILLE</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>CRÉER UN MOT DE PASSE</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+
+            <div class="btn-box">
+                <button type="submit" class="btn-save">VALIDER MON ACCÈS</button>
+                <button type="reset" class="btn-cancel">ANNULER</button>
+            </div>
+        </form>
+
+        <div class="back-nav">
+            <a href="index.html" class="back">
+               <span>🏠</span> RETOUR AU MAGASIN
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

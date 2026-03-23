@@ -1,0 +1,150 @@
+/* --- CONFIGURATION GÉNÉRALE --- */
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+    /* Couleur de fond bleue (dégradé sportif) */
+    background: radial-gradient(circle at top, #0a192f, #020c1b); 
+    color: white; 
+    text-align: center; 
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- ANIMATION DU TITRE (Lueur & Respiration) --- */
+@keyframes titlePulse {
+    0% { text-shadow: 2px 2px 0px #800000, 0 0 10px rgba(255, 0, 0, 0.5); }
+    50% { text-shadow: 2px 2px 0px #800000, 0 0 30px rgba(255, 0, 0, 0.8), 0 0 50px rgba(255, 0, 0, 0.4); }
+    100% { text-shadow: 2px 2px 0px #800000, 0 0 10px rgba(255, 0, 0, 0.5); }
+}
+
+header { 
+    padding: 25px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid #ff0000; 
+    display: flex;
+    align-items: center;
+}
+
+.header-center h1 { 
+    font-size: 2.2em; 
+    font-weight: 900; 
+    letter-spacing: 2px; 
+    margin: 0;
+    white-space: nowrap; 
+    color: #fff; 
+    text-transform: uppercase;
+    /* Application de l'animation au titre */
+    animation: titlePulse 3s infinite ease-in-out;
+}
+
+/* --- ANIMATIONS DES BOUTONS (Effet de brillance) --- */
+@keyframes btnGlow {
+    0% { box-shadow: 0 4px 0 #b30000, 0 0 0px rgba(255, 0, 0, 0); }
+    50% { box-shadow: 0 4px 0 #b30000, 0 0 20px rgba(255, 0, 0, 0.6); }
+    100% { box-shadow: 0 4px 0 #b30000, 0 0 0px rgba(255, 0, 0, 0); }
+}
+
+.header-btn {
+    text-decoration: none;
+    color: white;
+    background: #ff0000;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    display: inline-block;
+    animation: btnGlow 2s infinite;
+}
+
+.header-btn:hover {
+    background: #cc0000;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* --- GRILLE ET CARTES --- */
+.container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+
+.main-tagline {
+    font-size: 1.1em; font-weight: 700; margin-bottom: 50px;
+    letter-spacing: 4px; color: #ecf0f1; text-transform: uppercase;
+    display: inline-block; position: relative; padding-bottom: 10px;
+}
+
+.main-tagline::after {
+    content: ''; position: absolute; bottom: 0; left: 25%; width: 50%;
+    height: 2px; background: #ff0000;
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px; 
+}
+
+.category-card { 
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 12px; 
+    padding: 50px 20px;
+    text-decoration: none; 
+    color: white; 
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.category-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-10px);
+}
+
+.card-foot:hover { border-color: #00d2ff; box-shadow: 0 10px 30px rgba(0,210,255,0.3); }
+.card-basket:hover { border-color: #ff8c00; box-shadow: 0 10px 30px rgba(255,140,0,0.3); }
+.card-judo:hover { border-color: #ffd700; box-shadow: 0 10px 30px rgba(255,215,0,0.3); }
+
+/* --- ICONES ET BOUTONS DE CARTES --- */
+.icon-box { font-size: 4em; margin-bottom: 20px; transition: 0.3s; }
+.category-card:hover .icon-box { transform: scale(1.2) rotate(5deg); }
+
+h2 { font-size: 1.8em; margin-bottom: 10px; font-weight: 900; }
+.sub-text { font-size: 0.85em; color: #7f8c8d; margin-bottom: 30px; letter-spacing: 1px; }
+
+.btn-view {
+    padding: 14px 30px; 
+    background: rgba(255,255,255,0.1); 
+    color: #fff;
+    border-radius: 6px; 
+    font-weight: 900; 
+    text-transform: uppercase;
+    transition: 0.3s; 
+    font-size: 0.8em; 
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Couleurs dynamiques au survol */
+.card-foot:hover .btn-view { background: #00d2ff; color: #000; }
+.card-basket:hover .btn-view { background: #ff8c00; color: #000; }
+.card-judo:hover .btn-view { background: #ffd700; color: #000; }
+
+/* --- BARRE DE CONFIANCE --- */
+.trust-bar {
+    display: flex; 
+    justify-content: space-around; 
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px; 
+    margin-top: 80px; 
+    font-weight: 800; 
+    color: #bdc3c7;
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    font-size: 0.75em;
+    border-radius: 12px;
+}
+
+.trust-item { display: flex; align-items: center; gap: 12px; }
+.trust-icon { font-size: 1.8em; filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.4)); }

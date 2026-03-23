@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KEVIN'S SHOP - HUB COMPLET</title>
+    <style>
+        /* --- CONFIGURATION GÉNÉRALE --- */
+        body { 
+            margin:0; padding:0; font-family: 'Segoe UI', system-ui, sans-serif; 
+            background: radial-gradient(circle at top, #1a1a1a, #000000); 
+            color: white; text-align:center; min-height: 100vh;
+        }
+        
+        /* --- HEADER & TITRE ANIMÉ --- */
+        @keyframes titlePulse {
+            0% { text-shadow: 2px 2px 0px #800000, 0 0 10px rgba(255, 0, 0, 0.5); }
+            50% { text-shadow: 2px 2px 0px #800000, 0 0 25px rgba(255, 0, 0, 0.8); }
+            100% { text-shadow: 2px 2px 0px #800000, 0 0 10px rgba(255, 0, 0, 0.5); }
+        }
+
+        header { 
+            padding: 25px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #ff0000; 
+            display: flex; align-items: center;
+        }
+
+        .header-left { flex: 1; } 
+        .header-center { flex: 3; }
+        .header-center h1 { 
+            font-size: 2.2em; font-weight: 900; letter-spacing: 2px; margin: 0;
+            white-space: nowrap; color: #fff; text-transform: uppercase;
+            animation: titlePulse 3s infinite ease-in-out;
+        }
+
+        .header-right { flex: 1; text-align: right; }
+
+        .header-btn {
+            text-decoration: none; color: white; background: #ff0000;
+            padding: 12px 25px; border-radius: 4px; font-weight: 900; 
+            text-transform: uppercase; font-size: 0.85em; transition: 0.3s;
+            display: inline-block; box-shadow: 0 4px 0 #b30000;
+        }
+
+        .header-btn:hover {
+            background: #cc0000; transform: translateY(2px);
+            box-shadow: 0 2px 0 #b30000;
+        }
+
+        /* --- CONTENU --- */
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+
+        .main-tagline {
+            font-size: 1.1em; font-weight: 700; margin-bottom: 50px;
+            letter-spacing: 4px; color: #ecf0f1; text-transform: uppercase;
+            display: inline-block; position: relative; padding-bottom: 10px;
+        }
+
+        .main-tagline::after {
+            content: ''; position: absolute; bottom: 0; left: 25%; width: 50%;
+            height: 2px; background: #ff0000;
+        }
+
+        /* --- GRILLE SPORT & PERSO --- */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .category-card { 
+            background: #111; border-radius: 12px; padding: 40px 20px;
+            text-decoration: none; color: white; border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.4s; display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* Hover de base */
+        .category-card:hover { transform: translateY(-10px); }
+
+        /* Couleurs spécifiques Boutique */
+        .card-foot:hover { border-color: #00d2ff; box-shadow: 0 10px 30px rgba(0,210,255,0.15); }
+        .card-basket:hover { border-color: #ff8c00; box-shadow: 0 10px 30px rgba(255,140,0,0.15); }
+        .card-judo:hover { border-color: #ffd700; box-shadow: 0 10px 30px rgba(255,215,0,0.15); }
+
+        /* Couleurs spécifiques Perso */
+        .card-presentation:hover { border-color: #a29bfe; box-shadow: 0 10px 30px rgba(162,155,254,0.15); }
+        .card-formation:hover { border-color: #fab1a0; box-shadow: 0 10px 30px rgba(250,177,160,0.15); }
+
+        .icon-box { font-size: 3.5em; margin-bottom: 20px; }
+        h2 { font-size: 1.5em; margin-bottom: 10px; font-weight: 900; }
+        .sub-text { font-size: 0.8em; color: #7f8c8d; margin-bottom: 25px; letter-spacing: 1px; }
+        
+        .btn-view {
+            padding: 12px 25px; background: rgba(255,255,255,0.05); color: #fff;
+            border-radius: 6px; font-weight: 900; text-transform: uppercase;
+            transition: 0.3s; font-size: 0.75em; border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Boutons Boutique */
+        .card-foot:hover .btn-view { background: #00d2ff; color: #000; border-color: #00d2ff; }
+        .card-basket:hover .btn-view { background: #ff8c00; color: #000; border-color: #ff8c00; }
+        .card-judo:hover .btn-view { background: #ffd700; color: #000; border-color: #ffd700; }
+        
+        /* Boutons Perso */
+        .card-presentation:hover .btn-view { background: #a29bfe; color: #000; border-color: #a29bfe; }
+        .card-formation:hover .btn-view { background: #fab1a0; color: #000; border-color: #fab1a0; }
+
+        /* --- TRUST BAR --- */
+        .trust-bar {
+            display: flex; justify-content: space-around; 
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px; margin-top: 80px; font-weight: 800; color: #7f8c8d;
+            border-top: 1px solid #222; font-size: 0.75em; border-radius: 12px;
+        }
+
+        .trust-item { display: flex; align-items: center; gap: 12px; }
+        .trust-icon { font-size: 1.8em; filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.4)); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left"></div> 
+        <div class="header-center">
+            <h1>🏆 KEVIN'S SHOP</h1>
+        </div>
+        <div class="header-right">
+            <a href="inscription.html" class="header-btn">DEVENIR MEMBRE</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <span class="main-tagline">L'équipement et le profil des champions</span>
+        
+        <div class="grid">
+            <a href="Football.html" class="category-card card-foot">
+                <div class="icon-box">⚽</div>
+                <h2>FOOTBALL</h2>
+                <p class="sub-text">MAÎTRISEZ LE TERRAIN</p>
+                <div class="btn-view">VOIR LES PRODUITS</div>
+            </a>
+
+            <a href="basketball.html" class="category-card card-basket">
+                <div class="icon-box">🏀</div>
+                <h2>BASKETBALL</h2>
+                <p class="sub-text">DÉFIEZ LA GRAVITÉ</p>
+                <div class="btn-view">VOIR LES PRODUITS</div>
+            </a>
+
+            <a href="Judo.html" class="category-card card-judo">
+                <div class="icon-box">🥋</div>
+                <h2>JUDO</h2>
+                <p class="sub-text">LA VOIE DE LA MAÎTRISE</p>
+                <div class="btn-view">VOIR LES PRODUITS</div>
+            </a>
+
+            <a href="presentation.html" class="category-card card-presentation">
+                <div class="icon-box">👤</div>
+                <h2>PRÉSENTATION</h2>
+                <p class="sub-text">QUI EST KÉVIN ?</p>
+                <div class="btn-view">DÉCOUVRIR MON PROFIL</div>
+            </a>
+
+            <a href="formation.html" class="category-card card-formation">
+                <div class="icon-box">🎓</div>
+                <h2>FORMATION</h2>
+                <p class="sub-text">L3 STAPS MANAGEMENT</p>
+                <div class="btn-view">VOIR MON PARCOURS</div>
+            </a>
+        </div>
+
+        <div class="trust-bar">
+            <div class="trust-item"><span class="trust-icon">⚡</span><div>LIVRAISON 24H</div></div>
+            <div class="trust-item"><span class="trust-icon">🛡️</span><div>PAIEMENT 100% SÉCURISÉ</div></div>
+            <div class="trust-item"><span class="trust-icon">💎</span><div>SERVICE PREMIUM</div></div>
+        </div>
+    </div>
+
+</body>
+</html>
